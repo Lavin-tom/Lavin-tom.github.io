@@ -4,6 +4,8 @@
   }
   .grid-container {
     display: flex;
+    position:absolute;
+    top:40%;
     justify-content: center;
     align-items: center;
     height: 100vh; /* set a height so that the container takes up the full height of the viewport */
