@@ -17,3 +17,12 @@ var typed = new Typed('#typed-text', {
   loop: true,
   showCursor: false
 });
+
+
+    // generate a random RGB color string
+    function getRandomColor() {
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      return "rgb(" + r + ", " + g + ", " + b + ")";
+    }
