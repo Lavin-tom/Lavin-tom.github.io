@@ -22,4 +22,4 @@ const friends = [
     }
   ];
   
-  module.exports = friends; // Export the array for use in other modules
+  //module.exports = friends; // Export the array for use in other modules

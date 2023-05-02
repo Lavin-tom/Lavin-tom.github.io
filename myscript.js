@@ -1,10 +1,49 @@
 
+const Colors = [];
+var message = "";
+const Names = [];
+
+
+// generate a random RGB color string
+function getRandomColor() {
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  return "rgb(" + r + ", " + g + ", " + b + ")";
+}
+
+// set random color for each stop element
+var stop1 = document.getElementById("stop1");
+var stop2 = document.getElementById("stop2");
+stop1.style.stopColor = getRandomColor();
+stop2.style.stopColor = getRandomColor();
+
+var divCon = document.getElementById("name");
+divCon.style.color = stop1.style.stopColor;
+Colors.push(stop1.style.stopColor);
+Colors.push(stop2.style.stopColor);
+
+
+// Define the rgbToHex() function as before
+function rgbToHex(rgbString) {
+  var parts = rgbString.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  delete(parts[0]);
+  for (var i = 1; i <= 3; ++i) {
+    parts[i] = parseInt(parts[i]).toString(16);
+    if (parts[i].length == 1) parts[i] = '0' + parts[i];
+  }
+  return '#' + parts.join('');
+}
+
+// Convert the RGB colors to hexadecimal using map()
+var hexColors = Colors.map(rgbToHex);
+
 // Use the friends array defined in friends.js
-console.log(friends);
+//console.log(friends);
 //console.log(randmsg);
 
-var message = "";
-const Names= [];
+
+
 // Get today's date
 const today = new Date();
 
@@ -14,10 +53,10 @@ for (let i = 0; i < friends.length; i++) {
   const birthday = friend.birthday;
 
   // Check if the friend's birthday is today
-  if (birthday.getDate() === today.getDate() && 
-      birthday.getMonth() === today.getMonth()) {
+  if (birthday.getDate() === today.getDate() &&
+    birthday.getMonth() === today.getMonth()) {
     // Display a birthday message with the friend's name
-    console.log(`Happy birthday, ${friend.name}!`);
+    //console.log(`Happy birthday, ${friend.name}!`);
     Names.push(friend.name);
     message = "Happy Birthday";
   }
@@ -25,10 +64,9 @@ for (let i = 0; i < friends.length; i++) {
 
 var hour = new Date().getHours();
 
-if(!message)
-{ 
+if (!message) {
   if (hour >= 5 && hour < 12) {
-    message = "Good morning!";  
+    message = "Good morning!";
   } else if (hour >= 12 && hour < 18) {
     message = "Good afternoon!";
   } else if (hour >= 18 && hour < 22) {
@@ -38,11 +76,11 @@ if(!message)
   }
 }
 var typed = new Typed('#typed-text', {
-  strings: [message+"-"],
+  strings: [message + "-"],
   typeSpeed: 100,
   loop: false,
   showCursor: false,
-  onComplete: function() {
+  onComplete: function () {
     // Call the second typing function here
     var typedName = new Typed('#name', {
       strings: Names,
@@ -52,45 +90,37 @@ var typed = new Typed('#typed-text', {
       showCursor: false
     });
     // Call the backspace method after a delay of 2 seconds
-  setTimeout(function() {
-  typed.backspace(5); // Delete 5 characters from the end of the current string
-  }, 2000);
+    setTimeout(function () {
+      typed.backspace(5); // Delete 5 characters from the end of the current string
+    }, 2000);
   }
 });
 
-    // generate a random RGB color string
-    function getRandomColor() {
-      var r = Math.floor(Math.random() * 256);
-      var g = Math.floor(Math.random() * 256);
-      var b = Math.floor(Math.random() * 256);
-      return "rgb(" + r + ", " + g + ", " + b + ")";
-    }
+var end = Date.now() + (10 * 600);
 
-    var end = Date.now() + (10 * 500);
+// go Buckeyes!
+//var colors = [stop1.style.stopColor, stop2.style.stopColor];
 
-    // go Buckeyes!
-    var colors = ['#bb0000', '#ffffff'];
-    
-    (function frame() {
-      confetti({
-        particleCount: 2,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: colors
-      });
-      confetti({
-        particleCount: 2,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: colors
-      });
-    
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    }());
+(function frame() {
+  confetti({
+    particleCount: 2,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 },
+    colors: hexColors
+  });
+  confetti({
+    particleCount: 2,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 },
+    colors: hexColors
+  });
+
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+}());
 
 // Define an array of messages
 var messages = [
@@ -111,12 +141,12 @@ var randomIndex = Math.floor(Math.random() * messages.length);
 // Get the message at the random index
 var message = messages[randomIndex];
 
-    // Call the second typing function here
-    var typedName = new Typed('#rand-msg', {
-      strings: [message],
-      typeSpeed: 100,
-      loop: false,
-      showCursor: false
-    });
+// Call the second typing function here
+var typedName = new Typed('#rand-msg', {
+  strings: [message],
+  typeSpeed: 80,
+  loop: false,
+  showCursor: false
+});
 // Display the message
-console.log(message);
+//console.log(message);
