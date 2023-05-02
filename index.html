@@ -3,6 +3,7 @@
   <head>
     <title>love_in_tom</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="typed.js"></script>
   </head>
@@ -10,6 +11,10 @@
     <div class ="main-div">
       <div class="div-content" id = "div-content">
         <h1 id="typed-text" class="content"></h1>
+        <h2 id="name" class = "content"></h2>
+          <div class = "random-msg">
+            <h3 id="rand-msg" class = "rand-msg"></h3>
+          </div>
       </div>
       <div class = "div-animation">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 500 500" width="100%" id="blobSvg" style="opacity: 1;" transform="rotate(0)" filter="blur(0px)">  
@@ -41,8 +46,13 @@
             </path>
           </svg>
         </div>
+        <div class = "bottom-nav">
+          <h2>lāvin</h2>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="randmsg.js"></script>
+    <script src="friends.js"></script>
     <script src="myscript.js"></script>
     <script>
     // set random color for each stop element
@@ -51,8 +61,9 @@
     stop1.style.stopColor = getRandomColor();
     stop2.style.stopColor = getRandomColor();
 
-    var divCon = document.getElementById("div-content");
+    var divCon = document.getElementById("name");
     divCon.style.color = stop1.style.stopColor;
+
     </script>
 </head>
 </body>
