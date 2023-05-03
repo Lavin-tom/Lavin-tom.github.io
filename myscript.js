@@ -1,6 +1,7 @@
 
 const Colors = [];
 var message = "";
+var eventday = "";
 const Names = [];
 
 
@@ -38,12 +39,6 @@ function rgbToHex(rgbString) {
 // Convert the RGB colors to hexadecimal using map()
 var hexColors = Colors.map(rgbToHex);
 
-// Use the friends array defined in friends.js
-//console.log(friends);
-//console.log(randmsg);
-
-
-
 // Get today's date
 const today = new Date();
 
@@ -55,10 +50,9 @@ for (let i = 0; i < friends.length; i++) {
   // Check if the friend's birthday is today
   if (birthday.getDate() === today.getDate() &&
     birthday.getMonth() === today.getMonth()) {
-    // Display a birthday message with the friend's name
-    //console.log(`Happy birthday, ${friend.name}!`);
     Names.push(friend.name);
     message = "Happy Birthday";
+    eventday = "yes";
   }
 }
 
@@ -76,7 +70,7 @@ if (!message) {
   }
 }
 var typed = new Typed('#typed-text', {
-  strings: [message + "-"],
+  strings: [message],
   typeSpeed: 100,
   loop: false,
   showCursor: false,
@@ -96,10 +90,9 @@ var typed = new Typed('#typed-text', {
   }
 });
 
+if(eventday)
+{
 var end = Date.now() + (10 * 600);
-
-// go Buckeyes!
-//var colors = [stop1.style.stopColor, stop2.style.stopColor];
 
 (function frame() {
   confetti({
@@ -121,8 +114,10 @@ var end = Date.now() + (10 * 600);
     requestAnimationFrame(frame);
   }
 }());
+}
 
-// Define an array of messages
+if(eventday)
+{// Define an array of messages
 var messages = [
   "Wishing you a very happy birthday filled with all the things you love the most. Have a great one!",
   "Another year older, another year wiser. Happy birthday and cheers to all the great things to come!",
@@ -134,7 +129,22 @@ var messages = [
   "You're not getting older, you're getting better. Happy birthday and here's to a year of growth, success, and happiness.",
   "I hope your birthday is filled with sunshine, rainbows, and all the good things that life has to offer. Enjoy your special day!"
 ];
-
+}
+else
+{
+  var messages = [
+    "In the end, everything will be okay. If it's not okay, it's not yet the end. - John Lennon",
+    "Life is 10% what happens to you and 90% how you react to it. - Charles R. Swindoll",
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Happiness is not something ready made. It comes from your own actions. - Dalai Lama",
+    "Believe you can and you're halfway there. - Theodore Roosevelt",
+    "The best way to predict the future is to create it. - Abraham Lincoln",
+    "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+    "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. - Oprah Winfrey",
+    "Be the change you wish to see in the world. - Mahatma Gandhi",
+    "Life is not about waiting for the storm to pass, it's about learning to dance in the rain. - Vivian Greene"
+  ];
+}
 // Generate a random index
 var randomIndex = Math.floor(Math.random() * messages.length);
 
@@ -148,5 +158,61 @@ var typedName = new Typed('#rand-msg', {
   loop: false,
   showCursor: false
 });
-// Display the message
-//console.log(message);
+
+
+
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: hexColors[0] },
+    shape: {
+      type: "circle",
+      stroke: { width: 0, color: "#000000" },
+      polygon: { nb_sides: 5 },
+      image: { src: "img/github.svg", width: 100, height: 100 }
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: hexColors[1],
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 1200 }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: false, mode: "repulse" },
+      onclick: { enable: false, mode: "push" },
+      resize: true
+    },
+    modes: {
+      grab: { distance: 400, line_linked: { opacity: 1 } },
+      bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+      repulse: { distance: 200, duration: 0.4 },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 }
+    }
+  },
+  retina_detect: true
+});
