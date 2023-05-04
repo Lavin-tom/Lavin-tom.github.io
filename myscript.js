@@ -127,7 +127,10 @@ var messages = [
   "Wishing you a day filled with happiness, love, and all the things that bring a smile to your face. Happy birthday!",
   "Here's to another year of adventures, laughs, and making memories together. Happy birthday to an awesome person!",
   "You're not getting older, you're getting better. Happy birthday and here's to a year of growth, success, and happiness.",
-  "I hope your birthday is filled with sunshine, rainbows, and all the good things that life has to offer. Enjoy your special day!"
+  "I hope your birthday is filled with sunshine, rainbows, and all the good things that life has to offer. Enjoy your special day!",
+  "Happy birthday to a wonderful person who deserves nothing but the best in life. May your day be filled with joy, laughter, and love. You're truly one of a kind, and I feel lucky to know you.",
+  "On your special day, I wish you all the happiness in the world. May your dreams come true and your heart be filled with love and laughter. Cheers to a new year of adventures and opportunities!",
+  "Wishing you a very happy birthday filled with love, laughter, and lots of cake! May this year bring you new adventures, opportunities, and growth. Cheers to another year of making amazing memories!"
 ];
 }
 else

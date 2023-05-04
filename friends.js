@@ -106,7 +106,145 @@ const friends = [
     {
       name: 'Vaishnavi',
       birthday: new Date('June 30, 1997'),
+    },
+    {//july
+      name: 'Nikhil',
+      birthday: new Date('July 3, 1997'),
+    },
+    {
+      name: 'Midhun',
+      birthday: new Date('July 4, 1997'),
+    },
+    {
+      name: 'Sunil',
+      birthday: new Date('July 7, 1997'),
+    },
+    {
+      name: 'Sagar',
+      birthday: new Date('July 11, 1997'),
+    },    
+    {
+      name: 'Jyothy',
+      birthday: new Date('July 15, 1997'),
+    },
+    {
+      name: 'Amma',
+      birthday: new Date('July 21, 1997'),
+    },
+    {
+      name: 'Anna',
+      birthday: new Date('July 22, 1997'),
+    },
+    {
+      name: 'Sandra',
+      birthday: new Date('July 23, 1997'),
+    },
+    {
+      name: 'Athul',
+      birthday: new Date('July 27, 1997'),
+    },
+    {
+      name: 'Thoma',
+      birthday: new Date('July 30, 1997'),
+    },
+    {//August
+      name: 'Adarsh',
+      birthday: new Date('August 1, 1997'),
+    },
+    {
+      name: 'Sukanya',
+      birthday: new Date('August 1, 1997'),
+    },
+    {
+      name: 'Jaidon',
+      birthday: new Date('August 5, 1997'),
+    },
+    {
+      name: 'Anjali',
+      birthday: new Date('August 7, 1997'),
+    },
+    {
+      name: 'Gokul',
+      birthday: new Date('August 8, 1997'),
+    },
+    {
+      name: 'Sarika',
+      birthday: new Date('August 9, 1997'),
+    },
+    {
+      name: 'Jerin',
+      birthday: new Date('August 12, 1997'),
+    },
+    {
+      name: 'Saran',
+      birthday: new Date('August 15, 1997'),
+    },
+    {
+      name: 'Binil',
+      birthday: new Date('August 18, 1997'),
+    },
+    {
+      name: 'Boss',
+      birthday: new Date('August 18, 1997'),
+    },
+    {
+      name: 'Namitha',
+      birthday: new Date('August 28, 1997'),
+    },
+    {
+      name: 'Greshma',
+      birthday: new Date('August 29, 1997'),
+    },
+    {//septempber
+      name: 'Greena',
+      birthday: new Date('September 1, 1997'),
+    },
+    {
+      name: 'Sivapriya',
+      birthday: new Date('September 10, 1997'),
+    },
+    {
+      name: 'Rijo',
+      birthday: new Date('September 13, 1997'),
+    },
+    {
+      name: 'Gokul',
+      birthday: new Date('September 17, 1997'),
+    },
+    {
+      name: 'Jeswin',
+      birthday: new Date('September 18, 1997'),
+    },
+    {
+      name: 'Vinitha',
+      birthday: new Date('September 20, 1997'),
+    },
+    {
+      name: 'Jucia',
+      birthday: new Date('September 20, 1997'),
+    },
+    {
+      name: 'Gayathri',
+      birthday: new Date('September 22, 1997'),
+    },
+    {
+      name: 'Vishnu',
+      birthday: new Date('September 22, 1997'),
+    },
+    {
+      name: 'Tom',
+      birthday: new Date('September 24, 1997'),
+    },
+    {
+      name: 'Ananthakrishnan',
+      birthday: new Date('September 27, 1997'),
+    },
+    {
+      name: 'Sethu',
+      birthday: new Date('September 29, 1997'),
+    },
+    {
+      name: 'Swathy',
+      birthday: new Date('September 1, 1997'),
     }
   ];
-  
-  //module.exports = friends; // Export the array for use in other modules
