@@ -1,6 +1,13 @@
 .content{
-    font-family:monospace;
+  font-family: 'Poppins', sans-serif;
     font-size: 80px;
+    font-weight: bold;
+}
+.namecontent
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
 }
 .main-div
 {
@@ -46,19 +53,23 @@
   display:flex;
   justify-content:center;
   align-items: center;
-  font-size: 15px;
+
   font-family:monospace;
   color: white;
+}
+a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
 }
 .random-msg
 {
   position: absolute;
-  top:80%;
+  top:90%;
   width: 75%;
   left:12%;
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  font-family: monospace;
-  font-style: italic;
+  font-family: 'Abel', sans-serif;
 }
