@@ -2,6 +2,8 @@
   font-family: 'Poppins', sans-serif;
     font-size: 80px;
     font-weight: bold;
+    position:absolute;
+    top: 10%;
 }
 .namecontent
 {
@@ -31,7 +33,7 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  top:50%;
+  top:40%;
   width: 80%;
   left: 10%;
   
@@ -53,7 +55,6 @@
   display:flex;
   justify-content:center;
   align-items: center;
-
   font-family:monospace;
   color: white;
 }
@@ -65,11 +66,31 @@ a {
 .random-msg
 {
   position: absolute;
-  top:90%;
+  top:75%;
   width: 75%;
   left:12%;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 23px;
+  font-family: 'Abel', sans-serif;
+
+}
+.circle-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 20%;
+  border-radius: 50%;
+  border: none;
+  left: 48%;
+  cursor: pointer;
+  opacity: 50%;
+  color: white;
+}
+#savechildren
+{
+  font-size: 23px;
+  color: red;
+  text-decoration: none;
   font-family: 'Abel', sans-serif;
 }
