@@ -13,7 +13,7 @@ const friends = [
     },
     {
       name: 'Vaishna',
-      birthday: new Date('May 5, 1997'),
+      birthday: new Date('May 6, 1997'),
     },
     {
       name: 'Athulya',
