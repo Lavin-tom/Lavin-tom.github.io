@@ -84,7 +84,7 @@ a {
   border: none;
   left: 48%;
   cursor: pointer;
-  opacity: 50%;
+  opacity: 75%;
   color: white;
 }
 #savechildren
@@ -93,4 +93,12 @@ a {
   color: red;
   text-decoration: none;
   font-family: 'Abel', sans-serif;
+}
+ion-icon {
+  position:absolute;
+  display: flex;
+  top:4%;
+  left:4%;
+  font-size: 28px;
+  color: #fff;
 }
