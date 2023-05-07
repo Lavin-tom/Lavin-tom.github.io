@@ -21,11 +21,11 @@ const friends = [
     },
     {
       name: 'Akhil',
-      birthday: new Date('May 7, 1997'),
+      birthday: new Date('May 7, 0000'),
     },
     {
       name: 'Arjun',
-      birthday: new Date('May 7, 1997'),
+      birthday: new Date('May 7, 0000'),
     },
     {
       name: 'Digina',
