@@ -1,6 +1,6 @@
 const friends = [
     {//Jan
-      name: 'Athimi',
+      name: 'Athmi',
       birthday: new Date('January 01, 0000'),
     },    
     {
@@ -128,7 +128,7 @@ const friends = [
       birthday: new Date('March 13, 0000'),
     },
     {
-      name: 'Albin
+      name: 'Albin',
       birthday: new Date('March 13, 0000'),
     },
     {
@@ -668,3 +668,4 @@ const friends = [
       birthday: new Date('December 29, 0000'),
     }
   ];
+//167 birthday

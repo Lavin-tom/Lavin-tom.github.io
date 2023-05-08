@@ -5,7 +5,7 @@ var eventday = "";
 const Names = [];
 var count = 0;
 let looping = false;
-var messsageshown = false;
+var Timeleftmessage = 'Happy Birthday';
 
 //to modify the bday with current year
 const currentYear = new Date().getFullYear();
@@ -75,6 +75,9 @@ for (let i = 0; i < friends.length; i++) {
 //setInterval(updateCountdown, 1000);
 var hour = new Date().getHours();
 
+if(!eventday)
+  Timeleftmessage = "Next Bday is in";
+
 if (!eventday) {
   if (hour >= 5 && hour < 12) {
     message = "Good morning!";
@@ -88,7 +91,7 @@ if (!eventday) {
 }
 
 var typed = new Typed('#typed-text', {
-  strings: [message],
+  strings: [message,Timeleftmessage],
   typeSpeed: 100,
   loop: false,
   showCursor: false,
@@ -107,9 +110,7 @@ var typed = new Typed('#typed-text', {
     }, 2000);
   }
 });
-messsageshown =true;
-if(messsageshown)
-  message = "Next Bday is in";
+
 
 if (eventday) {
   var end = Date.now() + (10 * 600);
@@ -180,8 +181,7 @@ var typedName = new Typed('#rand-msg', {
   showCursor: false
 });
 
-
-
+//particle.js library 
 particlesJS("particles-js", {
   particles: {
     number: { value: 80, density: { enable: true, value_area: 800 } },
