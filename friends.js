@@ -47,6 +47,10 @@ const friends = [
       name: 'Dains',
       birthday: new Date('January 23, 0000'),
     },
+    {
+      name: 'Sireesha',
+      birthday: new Date('January 23, 0000'),
+    },
     {//Feb
       name: 'Johaan',
       birthday: new Date('February 01, 0000'),
@@ -429,6 +433,10 @@ const friends = [
     },
     {
       name: 'Rijo',
+      birthday: new Date('September 13, 0000'),
+    },    
+    {
+      name: 'Ruksana',
       birthday: new Date('September 13, 0000'),
     },
     {
