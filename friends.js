@@ -1,5 +1,5 @@
 const friends = [
-    {//Jan
+    {//Jan - 13
       name: 'Athmi',
       birthday: new Date('January 01, 0000'),
     },    
@@ -51,7 +51,7 @@ const friends = [
       name: 'Sireesha',
       birthday: new Date('January 23, 0000'),
     },
-    {//Feb
+    {//Feb - 13
       name: 'Johaan',
       birthday: new Date('February 01, 0000'),
     },
@@ -64,7 +64,7 @@ const friends = [
       birthday: new Date('February 04, 0000'),
     },
     {
-      name: 'Sukrutha',
+      name: 'Sukritha',
       birthday: new Date('February 08, 0000'),
     },
     {
@@ -103,7 +103,7 @@ const friends = [
       name: 'Joma',
       birthday: new Date('February 28, 0000'),
     },
-    {//Mar
+    {//Mar - 17
       name: 'Berly',
       birthday: new Date('March 02, 0000'),
     },
@@ -171,7 +171,7 @@ const friends = [
       name: 'Sachin',
       birthday: new Date('March 31, 0000'),
     },
-    {//April
+    {//Apr - 14
       name: 'Johncy',
       birthday: new Date('April 04, 0000'),
     },
@@ -227,7 +227,7 @@ const friends = [
       name: 'Shinu',
       birthday: new Date('April 30, 0000'),
     },
-    {//may
+    {//May - 18
       name: 'Arun',
       birthday: new Date('May 2, 0000'),
     },
@@ -299,7 +299,7 @@ const friends = [
       name: 'Nandhu',
       birthday: new Date('May 25, 0000'),
     },
-    {//june
+    {//Jun - 10
       name: 'Jithu',
       birthday: new Date('June 3, 0000'),
     },
@@ -339,7 +339,7 @@ const friends = [
       name: 'Vaishnavi',
       birthday: new Date('June 30, 0000'),
     },
-    {//july
+    {//Jul -  10
       name: 'Nikhil',
       birthday: new Date('July 3, 0000'),
     },
@@ -379,7 +379,7 @@ const friends = [
       name: 'Thoma',
       birthday: new Date('July 30, 0000'),
     },
-    {//August
+    {//Aug - 12
       name: 'Adarsh',
       birthday: new Date('August 1, 0000'),
     },
@@ -427,7 +427,7 @@ const friends = [
       name: 'Greshma',
       birthday: new Date('August 29, 0000'),
     },
-    {//septempber
+    {//Sep - 14
       name: 'Greena',
       birthday: new Date('September 1, 0000'),
     },
@@ -483,7 +483,7 @@ const friends = [
       name: 'Swathy',
       birthday: new Date('September 30, 0000'),
     },
-    {//Oct
+    {//Oct - 15
       name: 'Bilgy',
       birthday: new Date('October 4, 0000'),
     },
@@ -543,7 +543,7 @@ const friends = [
       name: 'Judit',
       birthday: new Date('October 31, 0000'),
     },
-    {//Nov
+    {//Nov - 18
       name: 'Harsha',
       birthday: new Date('November 04, 0000'),
     },
@@ -615,7 +615,7 @@ const friends = [
       name: 'Bini',
       birthday: new Date('November 30, 0000'),
     },
-    {//Dec
+    {//Dec - 16
       name: 'Reshma',
       birthday: new Date('December 02, 0000'),
     },
