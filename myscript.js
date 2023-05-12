@@ -104,10 +104,6 @@ var typed = new Typed('#typed-text', {
       loop: looping,
       showCursor: false
     });
-    // Call the backspace method after a delay of 2 seconds
-    setTimeout(function () {
-      typed.backspace(5); // Delete 5 characters from the end of the current string
-    }, 2000);
   }
 });
 
@@ -164,7 +160,8 @@ else {
     "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
     "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. - Oprah Winfrey",
     "Be the change you wish to see in the world. - Mahatma Gandhi",
-    "Life is not about waiting for the storm to pass, it's about learning to dance in the rain. - Vivian Greene"
+    "Life is not about waiting for the storm to pass, it's about learning to dance in the rain. - Vivian Greene",
+    "To err is human; to forgive, Divine. - Alexander Pope"
   ];
 }
 // Generate a random index
@@ -176,9 +173,10 @@ var message = messages[randomIndex];
 // Call the second typing function here
 var typedName = new Typed('#rand-msg', {
   strings: [message],
-  typeSpeed: 80,
+  typeSpeed: 60,
   loop: false,
-  showCursor: false
+  showCursor: false,
+  backSpeed: 0
 });
 
 //particle.js library 
@@ -254,7 +252,7 @@ $('.circle-btn').click(function () {
     },
     dataType: 'jsonp',
   });
-
+  document.getElementById("#myButton").style.display = "none";
 });
 
 // Select the button element using its ID or class
