@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -16,9 +16,13 @@
     <script>
       window.alert('Hello there! I created this website as a unique way to send birthday wishes to my friends. However, I understand and respect your privacy. If you are uncomfortable with your personal information (including your first name and birthdate) being used on my site, please let me know and I will remove it promptly.I appreciate your understanding. Thank you!');
     </script>
+
   </head>
-  <body id = "particles-js">
-    <div class ="main-div" >
+  <body >
+    <audio id="event-audio">
+      <source src="assets/normal_day_music.mp3" type="audio/mpeg"> 
+    </audio>
+    <div class ="main-div"id = "particles-js" >
       <div class="div-content" id = "div-content">
         <h1 id="typed-text" class="content"></h1>
         <div class = "div-name">
@@ -68,9 +72,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="friends.js"></script>
     <script src="myscript.js"></script>
-    <script>
-
-    </script>
 </head>
 </body>
 </html>
