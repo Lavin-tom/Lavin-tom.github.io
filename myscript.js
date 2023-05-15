@@ -260,10 +260,10 @@ $('.circle-btn').click(function () {
   function changeAudioSource(eventType) {
     switch (eventType) {
       case "yes":
-        eventAudio.src = "assets/event_day_music.mp3";
+        eventAudio.src = "assets/event-day-music.mp3";
         break;
       case " ":
-        eventAudio.src = "assets/normal_day_music.mp3";
+        eventAudio.src = "assets/normal-day-music.mp3";
         break;
       }
       eventAudio.load();
