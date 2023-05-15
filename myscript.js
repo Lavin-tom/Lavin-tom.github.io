@@ -255,21 +255,21 @@ $('.circle-btn').click(function () {
   document.getElementById("#myButton").style.display = "none";
 });
 
-  var eventAudio = document.getElementById("event-audio");
+  //var eventAudio = document.getElementById("event-audio");
   // Call changeAudioSource function when event is displayed
-  function changeAudioSource(eventType) {
-    switch (eventType) {
-      case "yes":
-        eventAudio.src = "assets/event-day-music.mp3";
-        break;
-      case " ":
-        eventAudio.src = "assets/normal-day-music.mp3";
-        break;
-      }
-      eventAudio.load();
-      eventAudio.play();
-    }
-  changeAudioSource(eventday);
+  //function changeAudioSource(eventType) {
+    //switch (eventType) {
+      //case "yes":
+        //eventAudio.src = "assets/event-day-music.mp3";
+        //break;
+      //case " ":
+        //eventAudio.src = "assets/normal-day-music.mp3";
+        //break;
+      //}
+      //eventAudio.load();
+      //eventAudio.play();
+    //}
+  //changeAudioSource(eventday);
 // Select the button element using its ID or class
 var button = document.querySelector(".circle-btn");
 
