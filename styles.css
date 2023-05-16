@@ -91,7 +91,7 @@ a {
 }
 #savechildren
 {
-  font-size: 35px;
+  font-size: 30px;
   color: red;
   text-decoration: none;
   font-family: 'Abel', sans-serif;
@@ -103,4 +103,7 @@ ion-icon {
   left:4%;
   font-size: 28px;
   color: #fff;
+}
+.small-font {
+  font-size: 90%; /* Adjust the font size as needed */
 }

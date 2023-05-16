@@ -202,7 +202,7 @@ particlesJS("particles-js", {
       enable: true,
       distance: 150,
       color: hexColors[1],
-      opacity: 0.4,
+      opacity: 0.8,
       width: 1
     },
     move: {
@@ -245,6 +245,20 @@ $('.circle-btn').click(function () {
     dataType: 'jsonp',
   });
   document.getElementById("#myButton").style.display = "none";
+});
+
+//for ajax
+$('.testname').click(function () {
+    $('.rand-msg').html('I created this webpage to celebrate my friends birthdays, ensuring they feel remembered and special. It allows me to send heartfelt wishes to 171 individuals annually. Let me know if you want to include or exclude your name. Collect my yearly wishes here, even if I forget a personal message :) <a id="savechildren" href="https://www.instagram.com/love_in_tom"><b>lavin</b></a> ');
+    $('.rand-msg').addClass('small-font');
+    $.ajax({
+    type: "GET",
+    url: "https://api.meetup.com/2/cities",
+    success: function (data) {
+      $('.rand-msg').html(JSON.stringify(data));
+    },
+    dataType: 'jsonp',
+  });
 });
 
   var eventAudio = document.getElementById("event-audio");
