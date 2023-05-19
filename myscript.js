@@ -188,7 +188,7 @@ particlesJS("particles-js", {
       direction: "none",
       random: false,
       straight: false,
-      out_mode: "out",
+      out_mode: "bounce",
       bounce: false,
       attract: { enable: false, rotateX: 600, rotateY: 1200 }
     }
