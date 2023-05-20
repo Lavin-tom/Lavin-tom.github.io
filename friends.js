@@ -293,7 +293,7 @@ const friends = [
     },
     {
       name: 'Vimal',
-      birthday: new Date('May 20, 0000'),
+      birthday: new Date('May 19, 0000'),
     },
     {
       name: 'Bibin',
