@@ -97,13 +97,16 @@ var typed = new Typed('#typed-text', {
   showCursor: false,
   onComplete: function () {
     // Call the second typing function here
-    var typedName = new Typed('#name', {
-      strings: Names,
-      typeSpeed: 100,
-      backSpeed: 100,
-      loop: looping,
-      showCursor: false
-    });
+    if(eventday)
+    {
+      var typedName = new Typed('#name', {
+        strings: Names,
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: looping,
+        showCursor: false
+      });
+    }
   }
 });
 
@@ -277,3 +280,53 @@ function updateCountDown() {
 //call the count down function when event free day
 if(!eventday)
   setInterval(updateCountDown, 1000);
+else
+{
+  const imageUrl = 'https://Lavin-tom.github.io/assets/bday_card.jpeg';
+  const downloadButton = document.getElementById('#myButton');
+  
+  downloadButton.addEventListener('click', () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', imageUrl, true);
+    xhr.responseType = 'blob';
+  
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const blob = xhr.response;
+        const reader = new FileReader();
+        reader.onloadend = function () {
+          const image = new Image();
+          image.onload = function () {
+            const canvas = document.createElement('canvas');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            const context = canvas.getContext('2d');
+            context.drawImage(image, 0, 0);
+            
+            // Add the testing word
+            const text = Names;
+            context.font = '24px Arial';
+            context.fillStyle = 'black';
+            context.textAlign = 'center';
+            context.fillText(text, canvas.width / 2, canvas.height - 40);
+
+            const text1 = message;
+            context.font = '10px Arial';
+            context.fillStyle = 'black';
+            context.textAlign = 'center';
+            context.fillText(text1, canvas.width / 2, canvas.height - 20);
+            
+            // Convert the modified canvas to blob
+            canvas.toBlob(function (modifiedBlob) {
+              // Save the modified blob as a file
+              saveAs(modifiedBlob, 'my_bday_card.jpg');
+            }, 'image/jpeg', 1);
+          };
+          image.src = reader.result;
+        };
+        reader.readAsDataURL(blob);
+      }
+    };
+    xhr.send();
+  });
+}
