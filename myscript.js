@@ -282,10 +282,14 @@ if(!eventday)
   setInterval(updateCountDown, 1000);
 else
 {
+  var Namelength = Names.length;      //to find no of bdays in present day     
   const imageUrl = 'https://Lavin-tom.github.io/assets/bday_card.jpeg';
   const downloadButton = document.getElementById('#myButton');
-  
+  var userInput = Names[0];
+
   downloadButton.addEventListener('click', () => {
+    if(Namelength>=2)
+      userInput = prompt('Please enter your name to generate bday card-');
     const xhr = new XMLHttpRequest();
     xhr.open('GET', imageUrl, true);
     xhr.responseType = 'blob';
@@ -304,17 +308,17 @@ else
             context.drawImage(image, 0, 0);
             
             // Add the testing word
-            const text = Names;
-            context.font = '24px Arial';
+            const text = userInput;
+            context.font = '24px sans-serif';
             context.fillStyle = 'black';
             context.textAlign = 'center';
-            context.fillText(text, canvas.width / 2, canvas.height - 40);
+            context.fillText(text, canvas.width / 2, canvas.height/2);
 
             const text1 = message;
-            context.font = '10px Arial';
+            context.font = '10px sans-serif';
             context.fillStyle = 'black';
             context.textAlign = 'center';
-            context.fillText(text1, canvas.width / 2, canvas.height - 20);
+            context.fillText(text1, canvas.width / 2, canvas.height/2 - 20);
             
             // Convert the modified canvas to blob
             canvas.toBlob(function (modifiedBlob) {
