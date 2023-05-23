@@ -297,7 +297,7 @@ const friends = [
     },
     {
       name: 'Bibin',
-      birthday: new Date('May 22, 0000'),
+      birthday: new Date('May 25, 0000'),
     },
     {
       name: 'Nandhu',
