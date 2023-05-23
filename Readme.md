@@ -12,3 +12,6 @@ The following libraries were used in this project:
 ## Music used 
 #### Happy Birthday - Instrumental by [Benote](https://www.youtube.com/watch?v=57jZJ2QpKRg&t=0)
 #### Relaxing Background Music by  [Genuine Music](https://www.youtube.com/watch?v=PUyg3qizApw&t=0)
+
+## Image used
+#### Birthday card template By [Umesh creation](https://in.pinterest.com/pin/599330662950611760/)

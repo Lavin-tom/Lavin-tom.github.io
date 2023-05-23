@@ -222,7 +222,7 @@ $('.circle-btn').click(function () {
     success: function (data) {
       $('.rand-msg').html(JSON.stringify(data));
     },
-    dataType: 'jsonp',
+    dataType: 'json',
   });
   document.getElementById("#myButton").style.display = "none";
 });
@@ -237,7 +237,7 @@ $('.testname').click(function () {
     success: function (data) {
       $('.rand-msg').html(JSON.stringify(data));
     },
-    dataType: 'jsonp',
+    dataType: 'json',
   });
 });
 
@@ -283,13 +283,13 @@ if(!eventday)
 else
 {
   var Namelength = Names.length;      //to find no of bdays in present day     
-  const imageUrl = 'https://Lavin-tom.github.io/assets/Bday_card_template_23.jpeg';
+  const imageUrl = 'https://Lavin-tom.github.io/assets/Bday_card_template_23.jpg';
   const downloadButton = document.getElementById('#myButton');
   var userInput = Names[0];
 
   downloadButton.addEventListener('click', () => {
     if(Namelength>=2)
-      userInput = prompt('Please enter your name to generate bday card-');
+      userInput = prompt('Please enter your name to generate bday card-'+Names);
     const xhr = new XMLHttpRequest();
     xhr.open('GET', imageUrl, true);
     xhr.responseType = 'blob';
@@ -309,16 +309,10 @@ else
             
             // Add the testing word
             const text = userInput;
-            context.font = '24px sans-serif';
+            context.font = "italic bold 130px 'Monotype Corsiva', cursive";
             context.fillStyle = 'black';
             context.textAlign = 'center';
-            context.fillText(text, canvas.width / 2, canvas.height/2);
-
-            const text1 = message;
-            context.font = '10px sans-serif';
-            context.fillStyle = 'black';
-            context.textAlign = 'center';
-            context.fillText(text1, canvas.width / 2, canvas.height/2 - 20);
+            context.fillText(text, canvas.width / 2, canvas.height/2-80);
             
             // Convert the modified canvas to blob
             canvas.toBlob(function (modifiedBlob) {
