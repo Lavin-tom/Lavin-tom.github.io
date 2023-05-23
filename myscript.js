@@ -283,7 +283,7 @@ if(!eventday)
 else
 {
   var Namelength = Names.length;      //to find no of bdays in present day     
-  const imageUrl = 'https://Lavin-tom.github.io/assets/bday_card.jpeg';
+  const imageUrl = 'https://Lavin-tom.github.io/assets/Bday_card_template_23.jpeg';
   const downloadButton = document.getElementById('#myButton');
   var userInput = Names[0];
 
@@ -323,7 +323,7 @@ else
             // Convert the modified canvas to blob
             canvas.toBlob(function (modifiedBlob) {
               // Save the modified blob as a file
-              saveAs(modifiedBlob, 'my_bday_card.jpg');
+              saveAs(modifiedBlob, 'my_Bday_card.jpg');
             }, 'image/jpeg', 1);
           };
           image.src = reader.result;
