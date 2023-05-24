@@ -227,7 +227,7 @@ const friends = [
       name: 'Shinu',
       birthday: new Date('April 30, 0000'),
     },
-    {//May - 18
+    {//May - 20
       name: 'Arun',
       birthday: new Date('May 2, 0000'),
     },
@@ -294,6 +294,10 @@ const friends = [
     {
       name: 'Vimal',
       birthday: new Date('May 19, 0000'),
+    },
+    {
+      name:'Arun',
+      birthday: new Date('May 24, 0000'),
     },
     {
       name: 'Bibin',
@@ -684,4 +688,4 @@ const friends = [
       birthday: new Date('December 29, 0000'),
     }
   ];
-//171 birthday
+//172 birthday

@@ -229,7 +229,7 @@ $('.circle-btn').click(function () {
 
 //for ajax
 $('.testname').click(function () {
-    $('.rand-msg').html('I created this webpage to celebrate my friends birthdays, ensuring they feel remembered and special. It allows me to send heartfelt wishes to 171 individuals annually. Let me know if you want to include or exclude your name. Collect my yearly wishes here, even if I forget a personal message :) <a id="savechildren" href="https://www.instagram.com/love_in_tom"><b>lavin</b></a> ');
+    $('.rand-msg').html('I created this webpage to celebrate my friends birthdays, ensuring they feel remembered and special. It allows me to send heartfelt wishes to 172 individuals annually. Let me know if you want to include or exclude your name. Collect my yearly wishes here, even if I forget a personal message :) <a id="savechildren" href="https://www.instagram.com/love_in_tom"><b>lavin</b></a> ');
     $('.rand-msg').addClass('small-font');
     $.ajax({
     type: "GET",
