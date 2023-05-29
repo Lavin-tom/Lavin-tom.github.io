@@ -1,0 +1,109 @@
+.content{
+  font-family: 'Poppins', sans-serif;
+    font-size: 500%;
+    font-weight: bold;
+    position:absolute;
+    top: 10%;
+}
+.namecontent
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 500%;
+  font-weight: bold;
+}
+
+.main-div
+{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+.div-content
+{
+  position:absolute;
+  width:100%;
+  height:60%;
+  top:0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-name
+{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top:40%;
+  width: 80%;
+  left: 10%;
+  
+}
+.div-animation
+{
+  position:absolute;
+  width:100%;
+  height:40%;
+  top:60%;
+  overflow: hidden;
+}
+.bottom-nav
+{
+  position: absolute;
+  top:95%;
+  width:100%;
+  height:5%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-family:monospace;
+  color: white;
+}
+a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+.random-msg
+{
+  position: absolute;
+  top:75%;
+  width: 75%;
+  left:12%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 175%;
+  font-family: 'Abel', sans-serif;
+
+}
+.circle-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 20%;
+  border-radius: 50%;
+  border: none;
+  left: 48%;
+  cursor: pointer;
+  opacity: 75%;
+  color: white;
+}
+#savechildren
+{
+  font-size: 30px;
+  color: red;
+  text-decoration: none;
+  font-family: 'Abel', sans-serif;
+}
+ion-icon {
+  position:absolute;
+  display: flex;
+  top:4%;
+  left:4%;
+  font-size: 28px;
+  color: #fff;
+}
+.small-font {
+  font-size: 95%;
+}

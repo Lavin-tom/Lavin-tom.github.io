@@ -1,87 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5.5">
-    <meta property="og:title" content="love_in_tom">
-    <meta property="og:description" content="Hey, I've got a surprise for you!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta property="og:image" content="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/favicon.png">
     <meta property="og:url" content="https://lavin-tom.github.io/">
     <meta property="og:type" content="website">
-    <title>love_in_tom</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>Lavin Tom</title>
+    <meta name="description" content="Lavin's little corner of the internet">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script>
-      window.alert('Hello there! I have created this website as a unique way to send birthday wishes to my friends. Through this page, I can bring happiness to 172 people each year :) However, I understand and respect your privacy. If you are uncomfortable with your personal information, including your first name and birthdate, being used on my site, please let me know, and I will remove it promptly. I appreciate your understanding. Thank you!');
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/home.css">
+    <script src="https://kit.fontawesome.com/3c65bc5dec.js" crossorigin="anonymous"></script>
   </head>
-  <body >
-    <audio id="event-audio">
-      <source src="assets/normal-day-music.mp3" type="audio/mpeg"> 
-    </audio>
-    <div class ="main-div"id = "particles-js" >
-      <div class="div-content" id = "div-content">
-        <h1 id="typed-text" class="content"></h1>
-        <div class = "div-name">
-          <h2 id="name" class = "namecontent"></h2>
-        </div>
-          <div class = "random-msg">
-            <h3 id="rand-msg" class = "rand-msg"></h3>
 
-          </div>
-      </div>
-      <div class = "div-animation" >
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 500 500" width="100%" id="blobSvg" style="opacity: 1;" transform="rotate(0)" filter="blur(0px)">  
-            <defs>                        
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop id = "stop1" offset="0%" style="stop-color: rgb(238, 205, 163);"></stop> 
-                <stop id = "stop2" offset="100%" style="stop-color: rgb(239, 98, 159);"></stop> 
-              </linearGradient>                        
-            </defs>                                            
-            <path id="blob" fill="url(#gradient)" style="opacity: 0.8;">
-              <animate attributeName="d" dur="10s" repeatCount="indefinite" values="M436.87032,349.05548Q408.4258,448.11097,306.06935,451.62968Q203.7129,455.14839,157.4258,385.87516Q111.13871,
-              316.60194,93.22677,241.12968Q75.31484,165.65742,135.48613,87.80097Q195.65742,9.94452,281.80097,56.34258Q367.94452,102.74064,416.62968,176.37032Q465.31484,250,436.87032,349.05548Z;
-              M429.79847,339.54154Q392.67727,429.08308,294.97368,455.00137Q197.27008,480.91966,143.94598,403.56786Q90.62188,326.21607,83.52769,246.22992Q76.43351,166.24376,136.8518,92.77008Q197.27008,
-              19.29641,287.1482,55Q377.02632,90.70359,421.97299,170.3518Q466.91966,250,429.79847,339.54154Z;M388.67097,319.27849Q360.55699,388.55699,291.23441,379.72688Q221.91183,370.89678,145.00645,
-              354.28387Q68.10108,337.67097,71.32903,251.33548Q74.55699,165,142.39247,119.95591Q210.22796,74.91183,286.12043,91.61398Q362.0129,108.31613,389.39892,179.15806Q416.78495,250,388.67097,
-              319.27849Z;M436.87032,349.05548Q408.4258,448.11097,306.06935,451.62968Q203.7129,455.14839,157.4258,385.87516Q111.13871,316.60194,93.22677,241.12968Q75.31484,165.65742,135.48613,
-              87.80097Q195.65742,9.94452,281.80097,56.34258Q367.94452,102.74064,416.62968,176.37032Q465.31484,250,436.87032,349.05548Z">
-              </animate>
-            </path>
-            <path id="blob" fill="url(#gradient)" style="opacity: 0.8;">
-              <animate attributeName="d" dur="10s" repeatCount="indefinite" values="M420.7122,331.4339Q380.09423,412.86779,301.16508,
-              392.29219Q222.23594,371.7166,157.11322,349.24982Q91.99051,326.78305,53.64135,232.38203Q15.29219,137.98101,118.09898,129.47187Q220.90577,120.96273,294.67458,111.25967Q368.44339,
-              101.55661,414.88678,175.77831Q461.33017,250,420.7122,331.4339Z;M400,314Q352,378,277,420Q202,462,143,396Q84,330,66.5,241.5Q49,153,125.5,97.5Q202,42,298.5,55Q395,68,421.5,159Q448,
-              250,400,314Z;M390.7302,319.10952Q360.37524,388.21905,284.62068,409.39959Q208.86612,430.58014,161.11156,373.20082Q113.35701,315.8215,88.46857,238.04463Q63.58014,160.26776,136.76776,
-              117.04463Q209.95537,73.8215,303.79007,69.52027Q397.62476,65.21905,409.35497,157.60952Q421.08517,250,390.7302,319.10952Z;M420.7122,331.4339Q380.09423,412.86779,301.16508,392.29219Q222.23594,
-              371.7166,157.11322,349.24982Q91.99051,326.78305,53.64135,232.38203Q15.29219,137.98101,118.09898,129.47187Q220.90577,120.96273,294.67458,111.25967Q368.44339,101.55661,414.88678,175.77831Q461.33017,
-              250,420.7122,331.4339Z">
-              </animate>
-            </path>
-          </svg>
-          <button type="button" class="circle-btn" id = "#myButton" title="click to know how to celebrate your special day"><ion-icon name="heart-circle-outline"></ion-icon></button>
-        </div>
-        <div class = "bottom-nav">
-          <h2 class = "testname" title="for feedback and suggestions">lāvin</h2>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
-
-    <script src="friends.js"></script>
-    <script src="messages.js"></script>
-    <script src="myscript.js"></script>
-</head>
-</body>
+  <body>
+    <header>
+      <h1><b>Lavin</b> Tom K Abraham</h1>
+      <p>Software Engineer <a href="https://www.onwardgroup.com"><b>@Onward</b></a></p>
+      <ul>
+        <li><a href="https://github.com/lavin-tom"><i class="fa-brands fa-github fa-2x"></i></a></li>
+        <li><a href="https://gmail.com/lavintom007@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
+        <li><a rel="me" href="https://in.pinterest.com/love_in_tom"><i class="fa-brands fa-pinterest fa-2x"></i></a></li>
+        <li><a rel="me" href="https://techhub.social/@love_in_tom"><i class="fa-brands fa-mastodon fa-2x"></i></a></li>
+        <li><a href="https://instagram.com/love_in_tom"><i class="fa-brands fa-instagram fa-2x"></i></i></a></li>        
+        <li><a rel="me" href="event.html"><i class="fa-solid fa-cake-candles fa-2x"></i></a></li>
+      </ul>
+    </header>
+  </body>
 </html>
