@@ -5,8 +5,12 @@ body {
 }
 
 a {
-  color: #307EA9;
+  color: #333;
   text-decoration: none;
+}
+
+a:hover{
+  color: blue;
 }
 
 ul {
@@ -46,16 +50,6 @@ header ul li a {
   transition: color 0.25s ease-in;
   color: #BBB;
 }
-
-header ul li a:hover {
-  -webkit-transition: color 0.25s ease-in;
-  -moz-transition: color 0.25s ease-in;
-  -o-transition: color 0.25s ease-in;
-  -ms-transition: color 0.25s ease-in;
-  transition: color 0.25s ease-in;
-  color: rgb(152, 253, 152);
-}
-
 .fa-pinterest:hover{
   color: #bd081c;
   transition: color 0.25s ease;
@@ -78,10 +72,5 @@ header ul li a:hover {
   color: #181717;
 }
 .fa-cake-candles:hover{
-  color:#e4405f;
-}
-
-b:hover{
-  color: rgb(78, 253, 78);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color:coral;
 }

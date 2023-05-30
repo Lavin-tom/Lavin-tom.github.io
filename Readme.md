@@ -15,3 +15,8 @@ The following libraries were used in this project:
 
 ## Image used
 #### Birthday card template By [Umesh creation](https://in.pinterest.com/pin/599330662950611760/)
+
+## Code inspired from
+#### Profile page inspired from [Mark Tareshawty](https://github.com/btmills/tarebyte.github.io) and [Brandon Mills](https://github.com/btmills)
+#### Time line code copied from [Ritesh Kumar](https://codepen.io/ritz078)
+
