@@ -19,4 +19,4 @@ The following libraries were used in this project:
 ## Code inspired from
 #### Profile page inspired from [Mark Tareshawty](https://github.com/btmills/tarebyte.github.io) and [Brandon Mills](https://github.com/btmills)
 #### Time line code copied from [Ritesh Kumar](https://codepen.io/ritz078)
-
+#### Disclaimer: The logos of other companies displayed on this webpage are used solely for illustrative purposes and do not imply endorsement or affiliation. All logos remain the property of their respective owners. If you are a representative of any of the companies or organizations whose logos are featured and have concerns about their usage, please contact me, and i will promptly address your inquiries.
