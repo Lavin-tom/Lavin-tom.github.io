@@ -8,6 +8,9 @@ The following libraries were used in this project:
 - [Particle.js](https://github.com/VincentGarreau/particles.js/) - A lightweight and flexible JavaScript library for creating particle effects on the web.
 - [Canvas Confetti.js](https://github.com/catdad/canvas-confetti) - A simple and powerful JavaScript library for creating confetti effects on a canvas.
 - [Icons](https://ionic.io/ionicons) - Premium designed icons for use in web, iOS, Android, and desktop apps.
+- [Trianglify](https://github.com/qrohlf/trianglify) - Algorithmically generated triangle art
+- [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic SVG, font, and CSS toolkit
+- [Time-Line](https://github.com/NUKnightLab/TimelineJS) - TimelineJS: A Storytelling Timeline built in JavaScript.
 
 ## Music used 
 #### Happy Birthday - Instrumental by [Benote](https://www.youtube.com/watch?v=57jZJ2QpKRg&t=0)

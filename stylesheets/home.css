@@ -2,6 +2,10 @@ body {
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -9,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: blue;
 }
 
@@ -21,6 +25,7 @@ ul {
 header {
   margin: 15% 0 8%;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
@@ -48,32 +53,35 @@ header ul li a {
   -o-transition: color 0.25s ease-in;
   -ms-transition: color 0.25s ease-in;
   transition: color 0.25s ease-in;
-  color: #BBB;
+  color: rgb(58, 58, 58);
 }
-.fa-pinterest:hover{
+
+.fa-pinterest:hover {
   color: #bd081c;
   transition: color 0.25s ease;
   -o-transition: color 0.25s ease-in;
 }
 
-.fa-instagram:hover{
+.fa-instagram:hover {
   color: #e4405f;
 }
 
-.fa-mastodon:hover{
+.fa-mastodon:hover {
   color: #6364ff;
 }
 
-.fa-envelope:hover{
+.fa-envelope:hover {
   color: #ea4335;
 }
 
-.fa-github:hover{
+.fa-github:hover {
   color: #181717;
 }
-.fa-cake-candles:hover{
-  color:coral;
+
+.fa-cake-candles:hover {
+  color: coral;
 }
-.Mood-style b:hover{
+
+.Mood-style b:hover {
   color: green;
 }
