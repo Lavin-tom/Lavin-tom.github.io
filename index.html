@@ -149,17 +149,17 @@
     </div> <!-- .events-content -->
   </section>
   <script>
-    var header = document.querySelector('header'); // Select the header element
+    var bg = document.querySelector('html'); // Select the header element
 
     var pattern = new Trianglify({
       cell_size: 80,
-      height: header.offsetHeight,
+      height: bg.offsetHeight,
       variance: 0.75,
-      width: header.offsetWidth,
+      width: bg.offsetWidth,
       x_colors: 'random'
     });
 
-    header.style.backgroundImage = 'url(' + pattern.canvas().toDataURL() + ')'; // Set the background on the header
+    bg.style.backgroundImage = 'url(' + pattern.canvas().toDataURL() + ')'; // Set the background on the header
   </script>
 </body>
 
