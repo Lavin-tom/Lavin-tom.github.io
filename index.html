@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="testing">
 
 <head lang="en">
   <meta charset="UTF-8">
@@ -19,6 +19,7 @@
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script src="scripts/timeline.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
 
 <body>
   <header>
@@ -148,19 +149,14 @@
       </ul>
     </div> <!-- .events-content -->
   </section>
-  <script>
-    var bg = document.querySelector('html'); // Select the header element
-
-    var pattern = new Trianglify({
-      cell_size: 75,
-      height: bg.offsetHeight,
-      variance: 0.75,
-      width: bg.offsetWidth,
-      x_colors: 'random'
-    });
-
-    bg.style.backgroundImage = 'url(' + pattern.canvas().toDataURL() + ')'; // Set the background on the header
-  </script>
+<script>
+  // Select the element where you want to apply the background pattern
+  const element = document.getElementById("testing");
+  // Generate a random seed for the pattern
+  const seed = Math.random().toString(36).substring(7);
+  // Generate the pattern and set it as the background
+  const pattern = GeoPattern.generate(seed);
+  element.style.backgroundImage = pattern.toDataUrl();
+</script>
 </body>
-
 </html>
