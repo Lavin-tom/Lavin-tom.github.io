@@ -51,7 +51,7 @@
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #dfdfdf;
+  background: #e0e0e0;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
@@ -89,7 +89,7 @@
   text-align: center;
   font-size: 80%;
   padding-bottom: 15px;
-  color: #383838;
+  color: #e0e0e0;
   /* fix bug on Safari - text flickering while timeline translates */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -163,7 +163,7 @@
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  border: 2px solid #919191;
+  border: 2px solid #e0e0e0;
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
@@ -206,7 +206,7 @@
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #7e7e7e;
+  border-color: #e0e0e0;
 }
 
 .cd-timeline-navigation a.inactive {
@@ -218,7 +218,7 @@
 }
 
 .no-touch .cd-timeline-navigation a.inactive:hover {
-  border-color: #adadad;
+  border-color: #e0e0e0;
 }
 
 .cd-horizontal-timeline .events-content {
@@ -313,7 +313,7 @@
 
 .cd-horizontal-timeline .events-content p {
   font-size: 60%;
-  color: #535353;
+  color: #e0e0e0;
   word-wrap: break-word;
 }
 

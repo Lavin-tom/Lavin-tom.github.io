@@ -59,7 +59,7 @@ header ul li a {
   -o-transition: color 0.25s ease-in;
   -ms-transition: color 0.25s ease-in;
   transition: color 0.25s ease-in;
-  color: rgb(58, 58, 58);
+  color: #e0e0e0;
 }
 
 .fa-pinterest:hover {
