@@ -336,7 +336,7 @@ const friends = [
     birthday: new Date('June 20, 0000'),
   },
   {
-    name: 'Soubhagya',
+    name: 'Saubhagya',
     birthday: new Date('June 25, 0000'),
   },
   {
