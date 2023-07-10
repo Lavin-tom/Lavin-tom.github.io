@@ -12,11 +12,6 @@ a {
   color: #e0e0e0;
   text-decoration: none;
 }
-
-a:hover {
-  color: blue;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -90,4 +85,7 @@ header ul li a {
 
 .Mood-style b:hover {
   color: green;
+}
+.fa-reddit-alien:hover{
+  color: #ff4500;
 }
