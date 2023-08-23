@@ -5,25 +5,45 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: /targets.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-assets>
-	<img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/favicon.png"/>
-      </a-assets>
+    <a-scene 
+		mindar-image="imageTargetSrc: /targets.mind" 
+		color-space="sRGB" 
+		renderer="colorManagement: true, physicallyCorrectLights" 
+		vr-mode-ui="enabled: false" 
+		device-orientation-permission-ui="enabled: false">
+		
+     <a-assets>
+		<img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/favicon.png" onload="getImageDimensions()"/>
+     </a-assets>
 	<script> 
-		function getImageDimensions()
-		{ 
+		function getImageDimensions(){ 
 			var current_image = document.getElementById("card"); 
 			var current_width = current_image.width; 
 			var current_height = current_image.height;
+			createScene();
 		} 
+		function createScene(){
+			var scene = document.querySelector("a-scene");
+			var plane = document.createElement("a-plane");
+			plane.setAttribute("src","#card");
+			plane.setAttributej("position","0 0 0");
+			plane.setAttribute("height",current_height);
+			plane.setAttribute("width",current_width);
+			plane.setAttribute("rotation","0 0 0");
+			scene.appendChild(plane);
+		}
 	</script>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane src="#card" position="0 0 0" height=current_height width=current_width rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel"
-          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-        >
+        <a-gltf-model 
+			rotation="0 0 0 " 
+			position="0 0 0.1" 
+			scale="0.005 0.005 0.005" 
+			src="#avatarModel"
+			animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+		</a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
