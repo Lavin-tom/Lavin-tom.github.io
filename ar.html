@@ -4,9 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-  <style>
-	#card{filter: invert(100%);}
-  </style>
 </head>
 <body>
   <a-scene
@@ -17,19 +14,32 @@
     device-orientation-permission-ui="enabled: false">
 
     <a-assets>
-      <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" onload="getImageDimensions()"/>
+      <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" onload="adjustImageSize()"/>
     </a-assets>
 
     <script>
-      var current_width, current_height; // Define variables to store dimensions
-
-      function getImageDimensions(){
+      function adjustImageSize(){
         var current_image = document.getElementById("card");
-        current_width = current_image.width;
-        current_height = current_image.height;
-        createScene(current_width, current_height); // Pass dimensions to createScene()
-        console.log(current_height, current_width);
-        console.log("imageDim over");
+        var scene = document.querySelector("a-scene");
+
+        var sceneWidth = scene.getAttribute("width");
+        var sceneHeight = scene.getAttribute("height");
+
+        // Calculate aspect ratios
+        var imageAspectRatio = current_image.width / current_image.height;
+        var sceneAspectRatio = sceneWidth / sceneHeight;
+
+        var width, height;
+
+        if (imageAspectRatio > sceneAspectRatio) {
+          width = sceneWidth;
+          height = width / imageAspectRatio;
+        } else {
+          height = sceneHeight;
+          width = height * imageAspectRatio;
+        }
+
+        createScene(width, height);
       }
 
       function createScene(width, height){
@@ -37,18 +47,16 @@
         var plane = document.createElement("a-plane");
         plane.setAttribute("src", "#card");
         plane.setAttribute("position", "0 0 0");
-        plane.setAttribute("height", height); // Use passed height
-        plane.setAttribute("width", width);   // Use passed width
-        plane.setAttribute("rotation", "0 0 0");
+        plane.setAttribute("height", height);
+        plane.setAttribute("width", width);
         scene.appendChild(plane);
-        console.log("createScene over");
       }
     </script>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <a-entity mindar-image-target="targetIndex: 0">
-      <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> <!-- Adjust height and width here -->
+      <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
     </a-entity>
   </a-scene>
 </body>
