@@ -14,41 +14,69 @@
     device-orientation-permission-ui="enabled: false">
 
     <a-assets>
-      <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" onload="adjustImageSize()"/>
+      <!-- Use a temporary asset for preloading, this won't be displayed in the scene -->
+      <img id="preloaded-card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" style="display: none;" onload="applyInvertEffect(this)"/>
     </a-assets>
 
     <script>
-      function adjustImageSize(){
-        var current_image = document.getElementById("card");
+      function applyInvertEffect(image){
+        // Create a new canvas
+        var canvas = document.createElement("canvas");
+        canvas.width = image.width;
+        canvas.height = image.height;
+        var context = canvas.getContext("2d");
+
+        // Draw the preloaded image onto the canvas
+        context.drawImage(image, 0, 0);
+
+        // Invert the image using the canvas
+        var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+        var data = imageData.data;
+        for (var i = 0; i < data.length; i += 4) {
+          data[i] = 255 - data[i]; // Red channel
+          data[i + 1] = 255 - data[i + 1]; // Green channel
+          data[i + 2] = 255 - data[i + 2]; // Blue channel
+        }
+        context.putImageData(imageData, 0, 0);
+
+        // Create a new image element with the inverted data
+        var invertedImage = new Image();
+        invertedImage.src = canvas.toDataURL("image/jpeg"); // Convert canvas to data URL
+        invertedImage.onload = function(){
+          adjustImageSize(invertedImage.width, invertedImage.height, invertedImage);
+        };
+      }
+
+      function adjustImageSize(width, height, image){
         var scene = document.querySelector("a-scene");
 
         var sceneWidth = scene.getAttribute("width");
         var sceneHeight = scene.getAttribute("height");
 
         // Calculate aspect ratios
-        var imageAspectRatio = current_image.width / current_image.height;
+        var imageAspectRatio = width / height;
         var sceneAspectRatio = sceneWidth / sceneHeight;
 
-        var width, height;
+        var adjustedWidth, adjustedHeight;
 
         if (imageAspectRatio > sceneAspectRatio) {
-          width = sceneWidth;
-          height = width / imageAspectRatio;
+          adjustedWidth = sceneWidth;
+          adjustedHeight = adjustedWidth / imageAspectRatio;
         } else {
-          height = sceneHeight;
-          width = height * imageAspectRatio;
+          adjustedHeight = sceneHeight;
+          adjustedWidth = adjustedHeight * imageAspectRatio;
         }
 
-        createScene(width, height);
+        createScene(adjustedWidth, adjustedHeight, image);
       }
 
-      function createScene(width, height){
+      function createScene(width, height, image){
         var scene = document.querySelector("a-scene");
         var plane = document.createElement("a-plane");
         plane.setAttribute("position", "0 0 0");
         plane.setAttribute("height", height);
         plane.setAttribute("width", width);
-        plane.setAttribute("material", "src: #card; color: white; shader: flat");
+        plane.setAttribute("material", "src", image.src); // Set the source of the inverted image
         scene.appendChild(plane);
       }
     </script>
