@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  <style>
+  #card {filter: invert(100%);}
+  </style>
 </head>
 <body>
   <a-scene
@@ -12,7 +15,7 @@
     renderer="colorManagement: true; physicallyCorrectLights: true"
     vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
-
+	
     <a-assets>
       <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" onload="adjustImageSize()"/>
     </a-assets>
