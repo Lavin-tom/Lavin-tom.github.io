@@ -17,24 +17,28 @@
       <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" onload="adjustImageSize(this)"/>
     </a-assets>
 
-    <script>
-      function adjustImageSize(image){
-        var width = image.width / 100; // Divide by 100 to match A-Frame's units
-        var height = image.height / 100; // Divide by 100 to match A-Frame's units
+<script>
+  function adjustImageSize(image){
+    var width = image.width / 100; // Divide by 100 to match A-Frame's units
+    var height = image.height / 100; // Divide by 100 to match A-Frame's units
 
-        createScene(width, height, image.src);
-      }
+    createScene(width, height, image.src);
+  }
 
-      function createScene(width, height, imageUrl){
-        var scene = document.querySelector("a-scene");
-        var plane = document.createElement("a-plane");
-        plane.setAttribute("position", "0 0 -1"); // Move the plane back on the z-axis
-        plane.setAttribute("height", height);
-        plane.setAttribute("width", width);
-        plane.setAttribute("material", "src: url(" + imageUrl + ")");
-        scene.appendChild(plane);
-      }
-    </script>
+  function createScene(width, height, imageUrl){
+    var scene = document.querySelector("a-scene");
+    var plane = document.createElement("a-plane");
+    plane.setAttribute("position", "0 0 -5"); // Move the plane back on the z-axis
+    plane.setAttribute("height", height);
+    plane.setAttribute("width", width);
+
+    var material = document.createElement("a-material");
+    material.setAttribute("src", "url(" + imageUrl + ")");
+    plane.appendChild(material);
+
+    scene.appendChild(plane);
+  }
+</script>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
