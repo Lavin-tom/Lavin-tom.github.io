@@ -19,21 +19,19 @@
 
     <script>
       function adjustImageSize(image){
-        var scene = document.querySelector("a-scene");
+        var width = image.width / 100; // Divide by 100 to match A-Frame's units
+        var height = image.height / 100; // Divide by 100 to match A-Frame's units
 
-        var width = image.width;
-        var height = image.height;
-
-        createScene(width, height);
+        createScene(width, height, image.src);
       }
 
-      function createScene(width, height){
+      function createScene(width, height, imageUrl){
         var scene = document.querySelector("a-scene");
         var plane = document.createElement("a-plane");
-        plane.setAttribute("position", "0 0 0");
+        plane.setAttribute("position", "0 0 -1"); // Move the plane back on the z-axis
         plane.setAttribute("height", height);
         plane.setAttribute("width", width);
-        plane.setAttribute("material", "src: #card");
+        plane.setAttribute("material", "src: url(" + imageUrl + ")");
         scene.appendChild(plane);
       }
     </script>
