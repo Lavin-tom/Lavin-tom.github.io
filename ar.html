@@ -12,33 +12,42 @@
     renderer="colorManagement: true, physicallyCorrectLights" 
     vr-mode-ui="enabled: false" 
     device-orientation-permission-ui="enabled: false">
-	<a-assets>
-		<img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/temp_image.jpg" onload="getImageDimensions()"/>
-    </a-assets>
-	<script>
-      var current_width, current_height; // Define variables to store dimensions
-		function getImageDimensions(){ 
-			var current_image = document.getElementById("card"); 
-			current_width = current_image.width; 
-			current_height = current_image.height;
-			createScene(current_width, current_height); // Pass dimensions to createScene()
-		} 
 
-		function createScene(width, height){
-			var scene = document.querySelector("a-scene");
-			var plane = document.createElement("a-plane");
-			plane.setAttribute("src","#card");
-			plane.setAttribute("position","0 0 0");
-			plane.setAttribute("height", height); // Use passed height
-			plane.setAttribute("width", width);   // Use passed width
-			plane.setAttribute("rotation","0 0 0");
-			scene.appendChild(plane);
-		}
+    <a-assets>
+      <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/ar.jpg" style="display: none;" />
+    </a-assets>
+
+    <script>
+      function preloadImage() {
+        var img = new Image();
+        img.src = document.querySelector("#card").getAttribute("src");
+      }
+      preloadImage(); // Call the preload function
+
+      function createScene(width, height) {
+        var scene = document.querySelector("a-scene");
+        var plane = document.createElement("a-plane");
+        plane.setAttribute("position", "0 0 0");
+        plane.setAttribute("height", height);
+        plane.setAttribute("width", width);
+        plane.setAttribute("material", "src: #card");
+        scene.appendChild(plane);
+
+        // Attach the AR content (child) to the plane
+        var arContent = document.createElement("a-plane");
+        arContent.setAttribute("position", "0 0 0.001");
+        arContent.setAttribute("height", "1");
+        arContent.setAttribute("width", "1");
+        plane.appendChild(arContent);
+      }
+
+      var current_image = document.getElementById("card");
+      createScene(current_image.width, current_image.height);
     </script>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     <a-entity mindar-image-target="targetIndex: 0">
-      <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> 
+      <a-plane position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> 
     </a-entity>
   </a-scene>
 </body>
