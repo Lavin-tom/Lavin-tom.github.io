@@ -17,21 +17,30 @@
       align-items: center;
       z-index: 9999;
     }
-    #guide_image {
-      max-width: 80%;
-      max-height: 80%;
-    }
-    .hidden {
+    #example-scanning-overlay.hidden {
       display: none;
+    }
+    #loading-overlay {
+      /* custom loading screen styles */
+    }
+    #error-overlay {
+      /* custom error screen styles */
     }
   </style>
 </head>
 <body>
   <div id="example-scanning-overlay" class="hidden">
+    <!-- custom scanning screen content -->
     <img id="guide_image" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/compiledTarget.png" alt="Scanning Guide" />
   </div>
+  <div id="loading-overlay" class="hidden">
+    <!-- custom loading screen content -->
+  </div>
+  <div id="error-overlay" class="hidden">
+    <!-- custom error screen content -->
+  </div>
   <a-scene 
-    mindar-image="imageTargetSrc: /compiledTarget.mind" 
+    mindar-image="uiScanning: #example-scanning-overlay; uiLoading: #loading-overlay; uiError: #error-overlay; imageTargetSrc: ./targets.mind"
     color-space="sRGB" 
     renderer="colorManagement: true, physicallyCorrectLights" 
     vr-mode-ui="enabled: false" 
