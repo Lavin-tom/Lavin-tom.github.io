@@ -1,91 +1,19 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-  <style>
-    #example-scanning-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    #example-scanning-overlay.hidden {
-      display: none;
-    }
-    #loading-overlay {
-      /* custom loading screen styles */
-    }
-    #error-overlay {
-      /* custom error screen styles */
-    }
-  </style>
-</head>
-<body>
-  <div id="example-scanning-overlay" class="hidden">
-    <!-- custom scanning screen content -->
-    <img id="guide_image" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/compiledTarget.png" alt="Scanning Guide" />
-  </div>
-  <div id="loading-overlay" class="hidden">
-    <!-- custom loading screen content -->
-  </div>
-  <div id="error-overlay" class="hidden">
-    <!-- custom error screen content -->
-  </div>
-  <a-scene 
-    mindar-image="uiScanning: #example-scanning-overlay; uiLoading: #loading-overlay; uiError: #error-overlay; imageTargetSrc: ./targets.mind"
-    color-space="sRGB" 
-    renderer="colorManagement: true, physicallyCorrectLights" 
-    vr-mode-ui="enabled: false" 
-    device-orientation-permission-ui="enabled: false"
-    onmindar-scanning-start="showGuideOverlay()"
-    onmindar-scanning-complete="hideGuideOverlay()">
-    <a-assets>
-      <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/ar.jpeg" onload="getImageDimensions()"/>
-    </a-assets>
-    <script>
-      var current_width, current_height;
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./compiledTarget.mind; showStats: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <img id="card" src="https://raw.githubusercontent.com/Lavin-tom/Lavin-tom.github.io/main/assets/ar.jpeg"/>
+      </a-assets>
 
-      function getImageDimensions(){ 
-        var current_image = document.getElementById("card"); 
-        current_width = current_image.width; 
-        current_height = current_image.height;
-        createScene(current_width, current_height);
-      } 
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      function createScene(width, height){
-        var scene = document.querySelector("a-scene");
-        var plane = document.createElement("a-plane");
-        plane.setAttribute("src","#card");
-        plane.setAttribute("position","0 0 0");
-        plane.setAttribute("height", height);
-        plane.setAttribute("width", width);
-        plane.setAttribute("rotation","0 0 0");
-        scene.appendChild(plane);
-      }
-
-      function showGuideOverlay() {
-        var overlay = document.getElementById("example-scanning-overlay");
-        overlay.classList.remove("hidden");
-      }
-
-      function hideGuideOverlay() {
-        var overlay = document.getElementById("example-scanning-overlay");
-        overlay.classList.add("hidden");
-      }
-    </script>
-
-    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     <a-entity mindar-image-target="targetIndex: 0">
       <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> 
     </a-entity>
-  </a-scene>
-</body>
+  </body>
 </html>
