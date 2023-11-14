@@ -16,6 +16,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <svg id="test1"></svg>
@@ -28,12 +29,19 @@
         chart = nv.models.sunburstChart();
 
         chart.color(d3.scale.category20c());
-
-        d3.select("#test1")
-                .datum(getData())
-                .call(chart);
-
-        nv.utils.windowResize(chart.update);
+		chart.labelThreshold(0.05)
+		chart.labelFormat(function(d){ return d.name;})
+		chart.showLabels(true);
+        d3.select("#test1").datum(getData()).call(chart);
+        // Add labels to the arcs
+        chart.dispatch.on('renderEnd', function() {
+            chart.sunburst.dispatch.on('elementMouseover.tooltip', function (e) {
+                d3.select("#test1 .nv-sunburstWrap text")
+                    .text(function(d) {
+                        return d.data.name;
+                    });
+            });
+        });
 
         return chart;
     });
@@ -1230,6 +1238,7 @@
                 }
 			]
 		}];
+		return data;
     }
 
 
