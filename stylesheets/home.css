@@ -1,15 +1,15 @@
 body {
-  color: #e0e0e0;
+  color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1;
   margin: 0;
   padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-opacity:50%;
+  background-repeat: no-repeat; 
 }
 
 a {
-  color: #e0e0e0;
+  color: black;
   text-decoration: none;
 }
 ul {
@@ -38,7 +38,7 @@ header h1 b {
 }
 
 header p {
-  color: #e0e0e0;
+  color: black;
   font-size: 87.5%;
   padding-bottom: 14px;
 }
@@ -54,9 +54,28 @@ header ul li a {
   -o-transition: color 0.25s ease-in;
   -ms-transition: color 0.25s ease-in;
   transition: color 0.25s ease-in;
-  color: #e0e0e0;
+  color: black;
+}
+.text {
+  width: relative;
+  height: 200%;
+  position: relative;
+  align-items:center;
+  margin-left:5%;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 10%;
+}
+.grayscale-svg {
+  filter: grayscale(100%);
+}
+.grayscale-svg:hover {
+  filter: grayscale(0%);
+}
 .fa-pinterest:hover {
   color: #bd081c;
   transition: color 0.25s ease;
