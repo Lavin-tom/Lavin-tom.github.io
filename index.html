@@ -13,151 +13,134 @@
   <meta name="description" content="Lavin's little corner of the internet">
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="stylesheets/home.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/timeline.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://kit.fontawesome.com/3c65bc5dec.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-  <script src="scripts/timeline.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/timeline.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="dist/js/timeline.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="https://kit.fontawesome.com/3c65bc5dec.js" crossorigin="anonymous"></script>
 
 <body>
-  <header>
-    <h1 class="Mood-style"><b>Lavin</b> Tom K Abraham</h1>
-    <p>Software Engineer <a href="https://www.onwardgroup.com"><b>@Onward</b></a></p>
-    <ul>
-      <li><a href="https://github.com/lavin-tom"><i class="fa-brands fa-github fa-2x"></i></a></li>
-      <li><a href="mailto:lavintom007@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
-      <li><a rel="me" href="https://in.pinterest.com/love_in_tom"><i class="fa-brands fa-pinterest fa-2x"></i></a></li>
-      <li><a rel="me" href="https://techhub.social/@love_in_tom"><i class="fa-brands fa-mastodon fa-2x"></i></a></li>
-      <li><a href="https://instagram.com/love_in_tom"><i class="fa-brands fa-instagram fa-2x"></i></i></a></li>
-      <li><a href="https://lemmy.world/u/love_in_tom"><i class="fa-brands fa-reddit-alien fa-2x"></i></i></a></li>
-      <li><a rel="me" href="event.html"><i class="fa-solid fa-cake-candles fa-2x"></i></a></li>
-    </ul>
-  </header>
-  <section class="cd-horizontal-timeline" id="pattern-container">
-    <div class="timeline">
-      <div class="events-wrapper">
-        <div class="events">
-          <ul>
-            <li><a href="#0" data-date="01/06/2012">Jun 2012</a></li>
-            <li><a href="#0" data-date="01/06/2013">Jun 2013</a></li>
-            <li><a href="#0" data-date="01/08/2015">Aug 2015</a></li>
-            <li><a href="#0" data-date="18/07/2019">Jul 2015</a></li>
-            <li><a href="#0" data-date="24/02/2020">Feb 2020</a></li>
-            <li><a href="#0" data-date="01/01/2022">Jan 2022</a></li>
-            <li><a href="#0" data-date="01/09/2022" class="selected">Sep 2022</a></li>
-          </ul>
-
-          <span class="filling-line" aria-hidden="true"></span>
-        </div> <!-- .events -->
-      </div> <!-- .events-wrapper -->
-
-      <ul class="cd-timeline-navigation">
-        <li><a href="#0" class="prev inactive">Prev</a></li>
-        <li><a href="#0" class="next">Next</a></li>
-      </ul> <!-- .cd-timeline-navigation -->
-    </div> <!-- .timeline -->
-
-    <div class="events-content">
+    <header>
+      <h1 class="Mood-style"><b>Lavin</b> Tom K Abraham</h1>
+      <p>Software Engineer <a href="https://www.onwardgroup.com"><b>@Onward</b></a></p>
       <ul>
-
-        <li data-date="01/06/2012">
+        <li><a href="https://github.com/lavin-tom"><i class="fa-brands fa-github fa-2x"></i></a></li>
+        <li><a href="mailto:lavintom007@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
+        <li><a rel="me" href="https://in.pinterest.com/love_in_tom"><i class="fa-brands fa-pinterest fa-2x"></i></a></li>
+        <li><a rel="me" href="https://techhub.social/@love_in_tom"><i class="fa-brands fa-mastodon fa-2x"></i></a></li>
+        <li><a href="https://instagram.com/love_in_tom"><i class="fa-brands fa-instagram fa-2x"></i></i></a></li>
+        <li><a href="https://lemmy.world/u/love_in_tom"><i class="fa-brands fa-reddit-alien fa-2x"></i></i></a></li>
+        <li><a rel="me" href="event.html"><i class="fa-solid fa-cake-candles fa-2x"></i></a></li>
+      </ul>
+    </header>
+<div class="timeline-container timeline-theme-1">
+  <div class="timeline js-timeline">
+    <div data-time="2012">
           <div class="content">
             <img src="assets/R.png" alt="Description of the image" class="grayscale-svg" width="100">
             <div class="text">
-              <h6>High School</h6>
+              <h5>High School</h5>
               <em>June 1st, 2012 - March 31st, 2013</em>
               <p>Completed SSLC from St John the baptist, H S S Nedumkunnam</p>
             </div>
           </div>
-        </li>
-
-        <li data-date="01/06/2013">
+    </div>
+    <div data-time="2013">
           <div class="content">
             <img src="assets/R.png" alt="Description of the image" class="grayscale-svg" width="100">
             <div class="text">
-              <H6>Higher Secondary</H6>
+              <h5>Higher Secondary</h5>
               <em>June 1st, 2013 - July 31st, 2015</em>
               <p>Higher Secondary education was completed at NSS Higher Secondary School, Karukachal</p>
             </div>
           </div>
-        </li>
-
-        <li data-date="01/08/2015">
+    </div>
+    <div data-time="2015">
           <div class="content">
             <a href="http://cek.ac.in/"><img src="assets/cek_logo.png" alt="Description of the image"
                 class="grayscale-svg" width="100"></a>
             <div class="text">
-              <h6>Bachelor's degree</h6>
+              <h5>Bachelor's degree</h5>
               <em>August 1st 2015 - July 17th, 2019</em>
               <p>A Bachelor's degree in Electrical and Electronics Engineering was pursued at College of Engineering,
                 Kallooppara Kerala</p>
             </div>
           </div>
-        </li>
-
-        <li data-date="18/07/2019">
+    </div>
+    <div data-time="2019">
           <div class="content">
             <a href="https://www.faceprep.in/"><img src="assets/face_logo.png" alt="Description of the image"
                 class="grayscale-svg" width="100"></a>
             <a href="http://ddugky.gov.in"><img src="assets/ddugky_logo.png" alt="Description of the image"
                 class="grayscale-svg" width="80"></a>
             <div class="text">
-              <h6>Full stack developer training</h6>
+              <h5>Full stack developer training</h5>
               <em>July 18th 2019 - January 31st, 2020</em>
               <p>Pursued a full-stack developer course under FACE and DDU-GKY</p>
             </div>
           </div>
-        </li>
-
-        <li data-date="24/02/2020">
+    </div>
+    <div data-time="2020">
           <div class="content">
             <a href="https://genisysin.com"><img src="assets/genisys_logo.png" alt="Description of the image"
                 class="grayscale-svg" width="150"></a>
             <div class="text">
-              <h6>Genisys Engineers and Contractors, Trivandrum</h6>
+              <h5>Genisys Engineers and Contractors, Trivandrum</h5>
               <em>February 24th, 2020 - December 31st, 2021</em>
               <p>Worked as a junior electrical engineer and participated in the KSEB (Kerala State Electricity Board)
                 Dyuthi project in North Malabar, Kerala.</p>
             </div>
           </div>
-        </li>
-
-        <li data-date="01/01/2022">
+    </div>
+	<div data-time="2022">
           <div class="content">
             <a href="https://www.vectorindia.org"><img src="assets/vector_logo.png" alt="Description of the image"
                 class="grayscale-svg" width="60"></a>
             <div class="text">
-              <h6>Embedded Training</h6>
+              <h5>Embedded Training</h5>
               <em>January 1st, 2022 - July 31st, 2022</em>
               <p>Pursued embedded system training at Vector Institute in Chennai</p>
             </div>
-          </div>
-        </li>
-
-        <li class="selected" data-date="01/09/2022">
+          </div>	
+	</div>
+	<div data-time="2022">
           <div class="content">
             <a href="https://www.onwardgroup.com"><img src="assets/onward_logo.png" alt="Description of the image"
                 class="grayscale-svg" width="150"></a>
             <div class="text">
-              <h6>Embedded software engineer</h6>
+              <h5>Embedded software engineer</h5>
               <em>September 1st, 2022 - Present</em>
               <p>Joined Onward Technologies Ltd as an embedded software engineer</p>
             </div>
           </div>
-        </li>
-      </ul>
-    </div> <!-- .events-content -->
-  </section>
+	</div>
+	<div data-time="2023">
+          <div class="content">
+            <a href="https://rntbci.in/"><img src="assets/rntbci_logo.png" alt="Description of the image"
+                class="grayscale-svg"  height="70"></a>
+            <div class="text">
+              <h5>Embedded software engineer</h5>
+              <em>August 9th, 2023 - Present</em>
+              <p>Joined Renault Nissan Technology & Business Centre India Private Limited as an embedded software engineer</p>
+            </div>
+          </div>
+	</div>	
+  </div>
+</div>
+
 <script>
-  // Select the element where you want to apply the background pattern
   const element = document.getElementById("backgroundid");
-  // Generate a random seed for the pattern
   const seed = Math.random().toString(36).substring(7);
-  // Generate the pattern and set it as the background
-  const pattern = GeoPattern.generate(seed);
-  element.style.backgroundImage = pattern.toDataUrl();
+  const pattern = Trianglify({
+    seed: seed,
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  element.style.backgroundImage = `url(${pattern.png()})`;
+  //time_line function
+  //https://ilkeryilmaz.github.io/timelinejs/
+  $('.js-timeline').Timeline({autoplay: false,startItem:'last',dotsPosition:'bottom'});
 </script>
 </body>
 </html>
