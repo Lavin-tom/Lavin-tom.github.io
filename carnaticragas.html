@@ -18,13 +18,10 @@
 </head>
 
 <body>
-
 <svg id="test1"></svg>
-
 <script>
 
     var chart;
-
     nv.addGraph(function() {
         chart = nv.models.sunburstChart();
 
@@ -33,7 +30,7 @@
 		chart.labelFormat(function(d){ return d.name;})
 		chart.showLabels(true);
         d3.select("#test1").datum(getData()).call(chart);
-        // Add labels to the arcs
+
         chart.dispatch.on('renderEnd', function() {
             chart.sunburst.dispatch.on('elementMouseover.tooltip', function (e) {
                 d3.select("#test1 .nv-sunburstWrap text")
@@ -1240,8 +1237,6 @@
 		}];
 		return data;
     }
-
-
 </script>
 </body>
 </html>
