@@ -660,6 +660,10 @@ const friends = [
     birthday: new Date('December 13, 0000'),
   },
   {
+    name: 'Vinaya',
+    birthday: new Date('December 13, 0000'),
+  },
+  {
     name: 'Albin',
     birthday: new Date('December 15, 0000'),
   },
