@@ -28,6 +28,10 @@ const friends = [
     birthday: new Date('January 07, 0000'),
   },
   {
+    name: 'Aboli',
+    birthday: new Date('January 12, 0000'),
+  },
+  {
     name: 'Santhosh',
     birthday: new Date('January 13, 0000'),
   },
